@@ -1,6 +1,9 @@
 # Portfolio
 
-Hello! This is a highlight of the various projects and interests I have over the years.
+Hello! I do a lot of projects that are aided by learning new tools, and solving problems.
+
+<volantarius@gmail.com>
+Or any other way you know me from!
 
 # Hammer
 
@@ -20,29 +23,29 @@ I started to use a tool called GE Edit, that would allow you to extract textures
 
 Complex was one were I actually had the model of the level imported in the Source engine. Then in the editor I could use the model as a guide to create the brushs as close as possible to the original level.
 
-![complex](complex_detail.jpg)
+![Paper thin geometry](complex_detail.jpg)
 
 Details mattered to me a lot and I had to make sure everything was the way it should.
 
-![complex](coldwinter3.jpg)
+![Sterling's Winter](coldwinter3.jpg)
 
 This level is from ColdWinter (PS2). At this point I wanted to see if I could do something different, and try to make levels from other games. I used a tool that can extract textures from ps2 emulation and recreated the level by hand with no guide. It's a fairly simple level to recreate.
 
-![complex](coldwinter2.jpg)
+![Sterling's Winter](coldwinter2.jpg)
 
 ## 2018
 
 Once I found this tool I got various ideas for other levels to make.
 
-![complex](thug1.jpg)
+![SP's Ville](thug1.jpg)
 
 This is a specific recreation of a pre-made park in Tony Hawk's Underground, called SP's Ville. All of the geometry was remade in Hammer. No model imports.
 
-![complex](thug_water.jpg)
+![Should have made an animation](thug_water.jpg)
 
 Again all the details mattered. The water here sways, uses cubemaps and normals to make it look a lot nicer, while staying true to the game.
 
-![complex](thug_detail.jpg)
+![Windows have reflections!](thug_detail.jpg)
 
 The textures when extracted had masks for reflections, these were also taken into account.
 
@@ -50,15 +53,15 @@ The textures when extracted had masks for reflections, these were also taken int
 
 Around when I finished and published my Tony Hawk map I got more interested in hacking game files themselves. My first real hack project was Timesplitters 1.
 
-![Source 2](ts1_problems.jpg)
+![A lot of issues](ts1_problems.jpg)
 
 I started to use Godot as a tool rather than make a game with. This was a great idea, since I was able to work much quicker and verify what I was doing. The screenshot was when I just got the meshs to slightly work. They had to have the culling disabled so that you can see a fully flat wall. Also this is not at all how the level would have been rendered. The lighting is way off and is being applied to the albedo instead of being treated as if it were light.
 
-![Source 2](ts1_new01.jpg)
+![Graveyard!](ts1_new01.jpg)
 
 But I worked hard and figured out all of the issues! Using a custom shader to use the vertex coloring as an emission output, other light sources in the engine can be used.
 
-![Source 2](ts1_chemicalplant.jpg)
+![Sort of like Goldeneye's collision](ts1_chemicalplant.jpg)
 
 The green is the collision meshs loaded up. Also to be noted; none of the secondary meshs are loaded right now. I'm still working on those.
 
@@ -82,12 +85,12 @@ Also to note, people always has seen the black and white stripes as just stripes
 
 More Timesplitters 1 screenshots.
 
-![Source 2](ts1_chinese.jpg)
-![Source 2](ts1_compound.jpg)
-![Source 2](ts1_docks.jpg)
-![Source 2](ts1_village.jpg)
+![Chinese](ts1_chinese.jpg)
+![Compound](ts1_compound.jpg)
+![Docks](ts1_docks.jpg)
+![Village](ts1_village.jpg)
 
 Hammer maps are compatable with older Hammer versions. This is the same Source Complex map in Half Life 1 Deathmatch.
 
-![Source 2](complex_hl1.jpg)
-![Source 2](complex_hl1detail.jpg)
+![Gldsrc](complex_hl1.jpg)
+![Gldsrc](complex_hl1detail.jpg)
