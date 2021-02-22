@@ -1,13 +1,13 @@
 # Portfolio
 
-Hello! I do a lot of projects that are aided by learning new tools, and solving problems.
+Hello! I do a lot of projects that are aided by learning new tools, and solving problems. Self taught and always been open to criticism and self improving. Most of my finished work are recreations of maps from other games.
 
 <volantarius@gmail.com>
 Or any other way you know me from!
 
 # Hammer
 
-I have used Source's Hammer Editor since 2007. Self taught and always been open to criticism and self improving. Most of my finished work are recreations of maps from other games.
+I have used Source's Hammer Editor since 2007. This is the program that has gotten me so interested in how games are made. Here's some of my history of what I ended up doing in Hammer.
 
 ## 2012
 
