@@ -52,11 +52,11 @@ I started to use Godot as a tool rather than make a game with. This was a great 
 
 ![Much better](ts1_chinesebetter.jpg)
 
-Eventually I figured out all of the issues! I wrote a little shader that treated vertex colors as light.
+Eventually I figured out all of the issues!
 
 ![Graveyard!](ts1_new01.jpg)
 
-Using emission for the vertex colors meant that engine's lights can be used with the level too.
+I wrote a shader to fix the lighting using emission for the vertex colors. This meant the engine's lights can cast correctly to the level.
 
 ![Sort of like Goldeneye's collision](ts1_chemicalplant.jpg)
 
