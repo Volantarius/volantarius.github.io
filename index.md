@@ -72,16 +72,13 @@ This is Half Life: Alyx. I've gotten to know Complex so well I can recite each v
 
 ![Source 2](complex2.jpg)
 
-Using Blender is great for creating textures. I recreated the walls individually and used Blenders bake normal map. Using this can make topologically correct normal maps, instead of a heightmap filter on any converter program. Blender can also create the ambient occlusion textures, metal textures, and roughness.
+Using Blender is great for creating textures. I recreated the walls individually and used Blender's bake normal map. Using this can make topologically correct normal maps, instead of a heightmap filter on any converter program. Blender can also create the ambient occlusion textures, metal textures, and roughness.
 
 ![Source 2](complex3.jpg)
 
+Also to note, people always has seen the black and white stripes as just stripes. I interpreted them as shadows on the bends on the metal.
+
 # Misc
-
-Hammer maps are compatable with older Hammer versions. This is the same Source Complex map in Half Life 1 Deathmatch
-
-![Source 2](complex_hl1.jpg)
-![Source 2](complex_hl1detail.jpg)
 
 More Timesplitters 1 screenshots.
 
@@ -89,3 +86,8 @@ More Timesplitters 1 screenshots.
 ![Source 2](ts1_compound.jpg)
 ![Source 2](ts1_docks.jpg)
 ![Source 2](ts1_village.jpg)
+
+Hammer maps are compatable with older Hammer versions. This is the same Source Complex map in Half Life 1 Deathmatch.
+
+![Source 2](complex_hl1.jpg)
+![Source 2](complex_hl1detail.jpg)
