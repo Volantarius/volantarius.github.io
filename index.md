@@ -3,17 +3,10 @@
 Hello! I do a lot of projects that are aided by learning new tools, and solving problems. Most of my finished work are recreations of maps from other games.
 
 <volantarius@gmail.com>
-Or any other way you know me from!
 
 # Hammer
 
 I have used Source's Hammer Editor since 2007. This is the program that has gotten me so interested in how games are made. Here's some of my history of what I ended up doing in Hammer.
-
-## 2012
-
-This is a recreation of a map called Hometown. I was trying out other lighting methods and created a cloudy skybox.
-
-![Hometown](hometown_recreated.jpg)
 
 ## 2017
 
@@ -57,9 +50,13 @@ Around when I finished and published my Tony Hawk map I got more interested in h
 
 I started to use Godot as a tool rather than make a game with. This was a great idea, since I was able to work much quicker and verify what I was doing. The screenshot was when I just got the meshs to slightly work. They had to have the culling disabled so that you can see a fully flat wall. Also this is not at all how the level would have been rendered. The lighting is way off and is being applied to the albedo instead of being treated as if it were light.
 
+![Much better](ts1_chinesebetter.jpg)
+
+But I worked hard and figured out all of the issues! Using a custom shader to use the vertex coloring as an emission output.
+
 ![Graveyard!](ts1_new01.jpg)
 
-But I worked hard and figured out all of the issues! Using a custom shader to use the vertex coloring as an emission output, other light sources in the engine can be used.
+Using emission for the vertex colors meant that engine's lights can be used with the level too.
 
 ![Sort of like Goldeneye's collision](ts1_chemicalplant.jpg)
 
