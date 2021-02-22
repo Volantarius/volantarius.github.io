@@ -1,6 +1,6 @@
 # Portfolio
 
-Hello! I do a lot of projects that are aided by learning new tools, and solving problems. Self taught and always been open to criticism and improving. Most of my finished work are recreations of maps from other games.
+Hello! I do a lot of projects that are aided by learning new tools, and solving problems. Most of my finished work are recreations of maps from other games.
 
 <volantarius@gmail.com>
 Or any other way you know me from!
