@@ -52,7 +52,7 @@ I started to use Godot as a tool rather than make a game with. This was a great 
 
 ![Much better](ts1_chinesebetter.jpg)
 
-But I worked hard and figured out all of the issues! Using a custom shader to use the vertex coloring as an emission output.
+Eventually I figured out all of the issues! I wrote a little shader that treated vertex colors as light.
 
 ![Graveyard!](ts1_new01.jpg)
 
@@ -91,3 +91,7 @@ Hammer maps are compatable with older Hammer versions. This is the same Source C
 
 ![Gldsrc](complex_hl1.jpg)
 ![Gldsrc](complex_hl1detail.jpg)
+
+Other Hammer projects.
+
+![Hometown](hometown_recreated.jpg)
