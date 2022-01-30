@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Welcome!"
 date: 2020-12-06 00:20:00 -0000
 categories: arma
@@ -8,7 +8,7 @@ categories: arma
 # Welcome
 
 **Hello worlds**, asodjiasd.
-ALSO NEW??
+ALSO NEW?? NEW NEW????
 
 {% highlight sqf %}
 if ( _checkPos isFlatEmpty [-1, -1, 0.7, 5, 0, false] isEqualTo [] ) exitWith {};
