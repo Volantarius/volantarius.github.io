@@ -1,7 +1,7 @@
----
 layout: post
 title: "Welcome!"
----
+date: 2020-12-06 00:20:00 -0000
+categories: arma
 
 # Welcome
 
