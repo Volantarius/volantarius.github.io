@@ -1,5 +1,5 @@
 :root {
-	--bg-color: black;
+	--bg-color: white;
 
 	--body-bg-color: beige;
 	--body-fg-color: black;
@@ -24,14 +24,28 @@
 	--gruv-grayd: #928374;
 	--gruv-orange: #fe8019;
 	--gruv-oranged: #d65d0e;
+
+	font-size: 0.96vw;
 }
 
 body {
 	background-color: var(--bg-color);
 	margin: 0px;padding: 0px;
 
-	font-size: 19pt;
-	font-family: "Helvetica", Arial, sans-serif;
+	font-family: Helvetica, "Helvetica", Arial, sans-serif;
+
+	font-size: 1.92vw;
+}
+
+@media screen and (orientation: landscape) {
+	body {
+		font-size: 1.92vh;
+	}
+}
+
+img {
+	padding: 0px;
+	margin: 0px;
 }
 
 h3 {
@@ -47,8 +61,35 @@ a {
 div.section {
 	background-color: var(--body-bg-color);
 	margin-left: 30pt;/*margin-right: 30pt;*/
-	padding: 13pt;
-	padding-top: 16pt;
-	font-size: 1em;
+	padding: 1.5em;
+	padding-top: 1em;
+	font-size: 1.5em;
 	color: var(--body-fg-color);
+}
+
+div.sectiondark {
+	background-color: var(--body-fg-color);
+	margin-right: 30pt;/*margin-right: 30pt;*/
+	padding: 1.5em;
+	padding-top: 1em;
+	font-size: 1.5em;
+	color: var(--body-bg-color);
+}
+
+div.gallery {
+	padding: 0px;
+	margin: 0px;
+	/*height: 1.92vh;*/
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+}
+
+div.gallery > img {
+	height: 45vh;
+	margin: 0px;
+	padding: 0px;
+	scroll-snap-align: none center;
 }
