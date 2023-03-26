@@ -12,15 +12,19 @@ const num2 = 3.14;
 console.log(num1 + num2);
 */
 
-function check_for_pattern(token) {
-	if (search_buffer === "//") {
-		console.log("Comment at ", line_number, ":", letter_position);
-		search_buffer = "";
+function check_for_pattern(token, line_number, letter_position) {
+	// We can probably still get nulls like most string searching functions do
+	if (token === "") {return false;};
+	
+	console.log(token);
+	
+	if (token === "//") {
+		console.log(`Comment at ${line_number}:${letter_position}`);
 	};
+	
 };
 
 function tokenize(text_input) {
-	
 	let search_buffer = "";
 	let line_number = 0;
 	let letter_position = 0;
@@ -29,29 +33,33 @@ function tokenize(text_input) {
 	for (let i = 0; i < text_input.length; i++) {
 		const letter = text_input[i];
 		
-		search_buffer += letter;
+		if (!letter || letter === "") {continue;};
 		
+		// @NOTE: This will count the newlines and spaces while this is here
 		letter_position += 1;
 		
-		terminate = false;
+		// Terminators
+		if (letter === "\n" || search_buffer === "\r\n") {// FUCKING WINDOWS NINETY EIGHT
+			line_number += 1;
+			letter_position = 0;
+			
+			check_for_pattern(search_buffer, line_number, letter_position);
+			
+			search_buffer = "";
+			
+			continue;
+		};
 		
 		// Skip spaces and tabs
 		if (letter === " " || letter === "\t") {
-			terminate = true;
-		};
-		
-		// TODO: Where does the check_for_pattern(search_buffer);
-		
-		// Terminators
-		if (search_buffer === "\n") {// OH AND CARRIAGE RETURN FUCKING WINDOWS NINETY EIGHT
-			line_number += 1;
-			letter_position = 0;
+			check_for_pattern(search_buffer, line_number, letter_position);
+			
 			search_buffer = "";
+			
+			continue;
 		};
 		
-		if (terminate) {
-			search_buffer = "";
-		};
+		search_buffer += letter;
 	};
 	
 };
