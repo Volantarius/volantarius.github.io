@@ -109,7 +109,7 @@ div.section {
 	background-color: var(--body-bg-color);
 	margin-left: 3em;/*margin-right: 30pt;*/
 	padding: 1.5em;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	color: var(--body-fg-color);
 }
 
@@ -118,7 +118,7 @@ div.sectiondark {
 	margin-right: 3em;/*margin-right: 30pt;*/
 	padding: 1.5em;
 	padding-top: 1em;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	color: var(--body-bg-color);
 }
 
