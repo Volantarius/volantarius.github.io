@@ -28,6 +28,22 @@
 	font-size: 0.96vw;
 }
 
+pre.codesnippet {
+	/*margin: 0.7em;*/
+	padding: 0.7em;
+	font-size:0.7em;
+	color: var(--gruv-fg);
+	background-color: var(--gruv-bg);
+}
+
+span.comment {
+	color: var(--gruv-yellow);
+}
+
+span.number {
+	color: var(--gruv-green);
+}
+
 body {
 	background-color: var(--bg-color);
 	margin: 0px;padding: 0px;
