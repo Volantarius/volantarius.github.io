@@ -5,35 +5,48 @@
 	--body-fg-color: black;
 
 	--header-fg-color: darkslategray;
-
+	
+	/* https://github.com/morhetz/gruvbox */
 	--gruv-fg: #ebdbb2;
 	--gruv-bg: #282828;
+	
 	--gruv-red: #fb4934;
 	--gruv-redd: #cc241d;
+	
 	--gruv-green: #b8bb26;
 	--gruv-greend: #98971a;
-	--gruv-yellow: #d79921;
-	--gruv-yellowd: #fabd2f;
+	
+	--gruv-yellow: #fabd2f;
+	--gruv-yellowd: #d79921;
+	
 	--gruv-blue: #83a598;
 	--gruv-blued: #458588;
+	
 	--gruv-purple: #d3869b;
 	--gruv-purpled: #b16286;
+	
 	--gruv-aqua: #8ec07c;
 	--gruv-aquad: #689d6a;
+	
 	--gruv-gray: #a89984;
 	--gruv-grayd: #928374;
+	
 	--gruv-orange: #fe8019;
 	--gruv-oranged: #d65d0e;
 
 	font-size: 0.96vw;
 }
 
-pre.codesnippet {
+pre.codewrapper {
 	/*margin: 0.7em;*/
 	padding: 0.7em;
 	font-size:0.7em;
 	color: var(--gruv-fg);
 	background-color: var(--gruv-bg);
+	
+	overflow: auto auto;
+	
+	/*max-height: calc(0.7em * 24);*/
 }
 
 span.comment {
@@ -42,6 +55,10 @@ span.comment {
 
 span.number {
 	color: var(--gruv-green);
+}
+
+span.control {
+	color: var(--gruv-aqua);
 }
 
 body {
