@@ -3,6 +3,28 @@
 // volantarius@gmail.com
 console.log("volantarius@gmail.com");
 
+function vcE( tagName, parentNode, className, attributes, innerText ) {
+	let newEle = document.createElement(tagName);
+	
+	newEle.className = className || "";
+	
+	if ( attributes ) {
+		for (const [key, value] of Object.entries(attributes)) {
+			newEle.setAttribute(key, value)
+		};
+	};
+	
+	if (parentNode) {
+		parentNode.appendChild(newEle)
+	};
+	
+	if (innerText) {
+		newEle.innerText = innerText;
+	};
+	
+	return newEle;
+};
+
 //Basic hightlighter for code snippets lol
 
 let highlight_js_control = [
@@ -197,6 +219,8 @@ function sample_test() {
 	let code_dom = code_blocks[0];
 	
 	code_dom.innerHTML = highlight(code_dom.textContent);
+	
+	//let artistHead = vcE("h3", code_dom, null, null, "Artist");
 };
 
 document.addEventListener('DOMContentLoaded', sample_test);

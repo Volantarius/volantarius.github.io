@@ -37,30 +37,6 @@
 	font-size: 0.96vw;
 }
 
-pre.codewrapper {
-	/*margin: 0.7em;*/
-	padding: 0.7em;
-	font-size:0.7em;
-	color: var(--gruv-fg);
-	background-color: var(--gruv-bg);
-	
-	overflow: auto auto;
-	
-	/*max-height: calc(0.7em * 24);*/
-}
-
-span.comment {
-	color: var(--gruv-yellow);
-}
-
-span.number {
-	color: var(--gruv-green);
-}
-
-span.control {
-	color: var(--gruv-aqua);
-}
-
 body {
 	background-color: var(--bg-color);
 	margin: 0px;padding: 0px;
@@ -103,8 +79,55 @@ h4 {
 }
 
 a {
-	text-decoration: none;
-	color: #938f3c;
+	text-decoration: underline;
+	color: cadetblue;
+}
+
+div.codewrapper {
+	background-color: var(--header-fg-color);
+	color: var(--body-bg-color);
+	
+	padding: 0em;
+	padding-bottom: 0.5em;
+	
+	/*margin-left: -1.5em;
+	padding-left: 1.5em;*/
+	
+	display: block;
+	/*overflow: auto;*/
+}
+
+div.codewrapper > p {
+	font-size: 0.7em;
+	margin: 0.5em;
+}
+
+pre.codewrapper {
+	/*margin: 0.7em;*/
+	padding: 0.7em;
+	font-size: 0.7em;
+	
+	color: var(--gruv-fg);
+	background-color: var(--gruv-bg);
+	
+	overflow: auto auto;
+	
+	/*max-height: calc(0.7em * 24);*/
+	
+	/*outline: 1px solid var(--body-bg-color);
+	outline-offset: -2px;*/
+}
+
+span.comment {
+	color: var(--gruv-yellow);
+}
+
+span.number {
+	color: var(--gruv-green);
+}
+
+span.control {
+	color: var(--gruv-aqua);
 }
 
 div.card {
@@ -124,19 +147,21 @@ div.card > img {
 
 div.section {
 	background-color: var(--body-bg-color);
+	color: var(--body-fg-color);
+	
 	margin-left: 3em;/*margin-right: 30pt;*/
 	padding: 1.5em;
 	font-size: 1.25em;
-	color: var(--body-fg-color);
 }
 
 div.sectiondark {
-	background-color: var(--body-fg-color);
+	background-color: var(--header-fg-color);
+	color: var(--body-bg-color);
+	
 	margin-right: 3em;/*margin-right: 30pt;*/
 	padding: 1.5em;
 	padding-top: 1em;
 	font-size: 1.25em;
-	color: var(--body-bg-color);
 }
 
 div.video {
@@ -150,7 +175,7 @@ div.video {
 	background-color: black;
 	max-height: 720px;
 	
-	box-shadow: 0.0em 0.5em 0.5em rgba(0, 0, 0, 0.4);
+	/*box-shadow: 0.0em 0.5em 0.5em rgba(0, 0, 0, 0.4);*/
 }
 
 div.video > iframe {
@@ -170,7 +195,7 @@ div.gallery {
 	scroll-snap-type: x mandatory;
 	background-color: black;
 	
-	box-shadow: 0.0em 0.5em 0.5em rgba(0, 0, 0, 0.4);
+	/*box-shadow: 0.0em 0.5em 0.5em rgba(0, 0, 0, 0.4);*/
 }
 
 div.gallery > img {
