@@ -1,11 +1,16 @@
 :root {
 	--bg-color: white;
-	--bg-color-dark: black;
-
-	--body-bg-color: beige;
+	
+	--card-bg-color: white;
+	
+	--body-bg-color: moccasin;/*beige*/
 	--body-fg-color: black;
 
+	--link-color: cadetblue;
 	--header-fg-color: darkslategray;
+	
+	--body-fg2-color: white;
+	--body-bg2-color: darkslategray;
 	
 	/* https://github.com/morhetz/gruvbox */
 	--gruv-fg: #ebdbb2;
@@ -53,6 +58,15 @@ body {
 	}
 }
 
+/*@layer components.buttons {
+  .btn {
+    background: hsl(0 0% 50% / 50%);
+    border: none;
+    border-radius: 5px;
+    padding: 1ch 2ch;
+  }
+}*/
+
 img {
 	padding: 0px;
 	margin: 0px;
@@ -81,12 +95,12 @@ h4 {
 
 a {
 	text-decoration: underline;
-	color: cadetblue;
+	color: var(--link-color);
 }
 
 div.codewrapper {
-	background-color: var(--header-fg-color);
-	color: var(--body-bg-color);
+	background-color: var(--body-bg2-color);
+	color: var(--body-fg2-color);
 	
 	padding: 0em;
 	padding-bottom: 0.5em;
@@ -132,7 +146,7 @@ span.control {
 }
 
 div.card {
-	background-color: white;
+	background-color: var(--card-bg-color);
 	margin: 0.5em;
 	margin-left: -1.5em;
 	display: block;
@@ -142,6 +156,10 @@ div.card {
 div.card > img {
 	margin-right: 0.5em;
 	display: block;
+	
+	width: auto;
+	height: 100%;
+	
 	clear: both;
 	float: left;
 }
@@ -184,7 +202,7 @@ div.video > iframe {
 	margin-top: 0px;margin-right: 0px;
 }
 
-div.gallery {
+div.gallery,div.gallerylarge {
 	padding: 0px;
 	margin: 0px;
 	display: flex;
@@ -202,14 +220,60 @@ div.gallery {
 div.gallery > img {
 	display: block;
 	max-height: 45vh;
-	margin: 0px;
+	margin: auto;
+	padding: 0px;
+	max-width: 95vw;
+	scroll-snap-align: none center;
+}
+
+div.gallerylarge > img {
+	display: block;
+	max-height: 60vh;
+	margin: auto;
 	padding: 0px;
 	max-width: 95vw;
 	scroll-snap-align: none center;
 }
 
 @media (prefers-color-scheme: dark) {
-	body {
-		background-color: var(--bg-color-dark);
+	:root {
+		/*--bg-color: dimgray;*/
+		--bg-color: black;
+		
+		--card-bg-color: black;
+		
+		--body-bg-color: #282828;
+		--body-fg-color: white;
+		
+		--body-fg2-color: white;
+		--body-bg2-color: teal;
+		
+		--link-color: darkturquoise;
+		--header-fg-color: darkturquoise;
+	}
+	
+	div.codewrapper {
+		outline: 1px solid moccasin;
+	}
+	
+	pre.codewrapper {
+		outline: 1px solid moccasin;
+	}
+	
+	h4 {
+		color: darkturquoise;
+	}
+	
+	div.section {
+		border-left: 0.3em solid moccasin;
+	}
+	
+	div.sectiondark {
+		background-color: moccasin;
+		color: black;
+	}
+	
+	div.sectiondark > a {
+		color: black;
 	}
 }
