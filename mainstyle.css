@@ -1,5 +1,6 @@
 :root {
 	--bg-color: white;
+	--bg-color-dark: black;
 
 	--body-bg-color: beige;
 	--body-fg-color: black;
@@ -205,4 +206,10 @@ div.gallery > img {
 	padding: 0px;
 	max-width: 95vw;
 	scroll-snap-align: none center;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: var(--bg-color-dark);
+	}
 }
