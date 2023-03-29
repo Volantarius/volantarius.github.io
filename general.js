@@ -213,14 +213,113 @@ function highlight(text_input) {
 	return output;
 };
 
-function sample_test() {
-	const code_blocks = document.getElementsByClassName('codesnippet');
+function create_overlay() {
+	document.body.overlay = vcE("div", document.body, null, {id:"overlay"}, null);
 	
-	let code_dom = code_blocks[0];
+	// Just to get things thrown in because it's simplier
+	//document.body.overlay.onpointerdown = (event) => {
+	document.body.overlay.onclick = (event) => {
+		event.cancelBubble = true;
+		event.stopPropagation();
+		event.stopImmediatePropagation();
+		
+		event.preventDefault();
+		
+		document.body.overlay.remove();
+	};
 	
-	code_dom.innerHTML = highlight(code_dom.textContent);
-	
-	//let artistHead = vcE("h3", code_dom, null, null, "Artist");
+	return document.body.overlay;
 };
 
-document.addEventListener('DOMContentLoaded', sample_test);
+// Attach to an image so we can zoom into the image nicely!
+function handle_image_zoom(event) {
+	console.log(event);
+	
+	// Scroll bar activates strangely
+	if (event.explicitOriginalTarget.nodeName !== "IMG") {
+		return;
+	};
+	
+	let overlay = create_overlay();
+	
+	// Prevent scroll around while in the overlay
+	overlay.onwheel = (e) => {
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+	};
+	
+	let image = vcE("img", overlay, null, {title: "hello!", src:event.srcElement.src}, null);
+	
+	// Make sure we can control the image properly
+	
+	image.onclick = (e) => {
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+	};
+	
+	image.onwheel = (e) => {
+		//if (e.composed) {return;};
+		
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+		
+		console.log(e);
+	};
+	
+	/*image.onpointerdown = (e) => {
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+		
+		console.log(e);
+	};
+	
+	image.onpointerup   = (e) => {
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+	};
+	
+	image.onpointercancel = (e) => {
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+	};
+	
+	image.onpointermove   = (e) => {
+		e.cancelBubble = true;
+		e.stopPropagation();
+		e.stopImmediatePropagation();
+		e.preventDefault();
+	};*/
+};
+
+function on_loaded() {
+	const code_blocks = document.getElementsByClassName("codesnippet");
+	
+	for (let i = 0; i < code_blocks.length; i++) {
+		let code_dom = code_blocks[i];
+		
+		code_dom.innerHTML = highlight(code_dom.textContent);
+	};
+	
+	// Setup galleries to have buttons and stuff
+	const gallery_images = document.querySelectorAll("div.gallery,div.gallerylarge");
+	
+	for (let i = 0; i < gallery_images.length; i++) {
+		gallery_images[i].addEventListener("click", handle_image_zoom);
+		
+		console.log(gallery_images[i]);
+	};
+};
+
+document.addEventListener("DOMContentLoaded", on_loaded);
