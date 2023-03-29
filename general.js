@@ -233,7 +233,7 @@ function create_overlay() {
 
 // Attach to an image so we can zoom into the image nicely!
 function handle_image_zoom(event) {
-	console.log(event);
+	//console.log(event);
 	
 	// Scroll bar activates strangely
 	if (event.explicitOriginalTarget.nodeName !== "IMG") {
@@ -248,6 +248,45 @@ function handle_image_zoom(event) {
 		e.stopPropagation();
 		e.stopImmediatePropagation();
 		e.preventDefault();
+	};
+	
+	let context_button = vcE("div", overlay, "context", null, null);
+	// Need to literally modify the style.css to move this without issue...
+	context_button.style.left = null;
+	context_button.style.right = "4em";
+	context_button.style.top = "4em";
+	context_button.style.bottom = null;
+	context_button.style.setProperty("left", null);
+	context_button.style.setProperty("right", "4em");
+	context_button.style.setProperty("top", "4em");
+	context_button.style.setProperty("bottom", null);
+	
+	// Move the close button to whichever corner the mouse is at, because that's more intelligent
+	overlay.onmousemove = (e) => {
+		
+		if ( e.clientX < ( window.innerWidth * 0.5 ) ) {
+			context_button.style.left = "4em";
+			context_button.style.right = null;
+			context_button.style.setProperty("left", "4em");
+			context_button.style.setProperty("right", null);
+		} else {
+			context_button.style.left = null;
+			context_button.style.right = "4em";
+			context_button.style.setProperty("left", null);
+			context_button.style.setProperty("right", "4em");
+		};
+		
+		if ( e.clientY < ( window.innerHeight * 0.5 ) ) {
+			context_button.style.top = "4em";
+			context_button.style.bottom = null;
+			context_button.style.setProperty("top", "4em");
+			context_button.style.setProperty("bottom", null);
+		} else {
+			context_button.style.top = null;
+			context_button.style.bottom = "4em";
+			context_button.style.setProperty("top", null);
+			context_button.style.setProperty("bottom", "4em");
+		};
 	};
 	
 	let image = vcE("img", overlay, null, {title: "hello!", src:event.srcElement.src}, null);
@@ -271,36 +310,6 @@ function handle_image_zoom(event) {
 		
 		console.log(e);
 	};
-	
-	/*image.onpointerdown = (e) => {
-		e.cancelBubble = true;
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		e.preventDefault();
-		
-		console.log(e);
-	};
-	
-	image.onpointerup   = (e) => {
-		e.cancelBubble = true;
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		e.preventDefault();
-	};
-	
-	image.onpointercancel = (e) => {
-		e.cancelBubble = true;
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		e.preventDefault();
-	};
-	
-	image.onpointermove   = (e) => {
-		e.cancelBubble = true;
-		e.stopPropagation();
-		e.stopImmediatePropagation();
-		e.preventDefault();
-	};*/
 };
 
 function on_loaded() {
@@ -318,7 +327,7 @@ function on_loaded() {
 	for (let i = 0; i < gallery_images.length; i++) {
 		gallery_images[i].addEventListener("click", handle_image_zoom);
 		
-		console.log(gallery_images[i]);
+		//console.log(gallery_images[i]);
 	};
 };
 
