@@ -218,7 +218,7 @@ function create_overlay() {
 	
 	// Just to get things thrown in because it's simplier
 	//document.body.overlay.onpointerdown = (event) => {
-	document.body.overlay.onclick = (event) => {
+	document.body.overlay.onpointerdown = (event) => {
 		event.cancelBubble = true;
 		event.stopPropagation();
 		event.stopImmediatePropagation();
@@ -325,7 +325,7 @@ function on_loaded() {
 	const gallery_images = document.querySelectorAll("div.gallery,div.gallerylarge");
 	
 	for (let i = 0; i < gallery_images.length; i++) {
-		gallery_images[i].addEventListener("click", handle_image_zoom);
+		gallery_images[i].addEventListener("pointerdown", handle_image_zoom);
 		
 		//console.log(gallery_images[i]);
 	};
