@@ -322,7 +322,7 @@ function on_loaded() {
 	};
 	
 	// Setup galleries to have buttons and stuff
-	const gallery_images = document.querySelectorAll("div.gallery,div.gallerylarge");
+	const gallery_images = document.querySelectorAll("div.gallery > img");
 	
 	for (let i = 0; i < gallery_images.length; i++) {
 		gallery_images[i].addEventListener("pointerdown", handle_image_zoom);
