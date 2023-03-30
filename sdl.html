@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="mainstyle.css" />
+<head>
+	<meta charset="UTF-8" />
+	<title>Christian Nye's Portfolio</title>
+</head>
+<body>
+	<div class="section">
+		<h4>Christian Nye</h4>
+		<h3>C++ and SDL</h3>
+		<p>I was reluctant to start C++ because I was waiting for something I was more interested in. I knew there would be lots of friction, and difficult to find good documentation. I'm still learning how to use it that is best suited for the compiler. Unfortunately I've had a lot of time constraints in my life and haven't been able to really get back to this.</p>
+		<p>What you will see is levels from the Playstation 2 game Timesplitters. I saw someone was working on making Unity Timesplitters game, and had a package loader for the sequels but not first game. I took a look at my disc and found out it was the same format! What I found is that the models and levels were in a really simple format, so I decided to use those and make life simplier by not loading text files (Wavefront Obj or Mtl). Illegal yes, but hey I learned about some package types! Take a look at them yourself there is no encryption!</p>
+		<p>Plus I have a affinity for the Playstation 2. Plus Plus I love the game designers! They also designed GoldenEye, and the rumors of Timesplitters sharing code from the Rare days is very possible.</p>
+	</div>
+	
+	<div class="gallery">
+		<img src="pics/cpp-sdl/20220112094448_1.jpg"/>
+		<img src="pics/cpp-sdl/20220112224230_1.jpg"/>
+	</div>
+	
+	<div class="section">
+		<p>At the beginning I didn't know how to manage memory, setup threads, or have a proprietary file type. I wanted to get started on graphics, and shaders. This wasn't a good idea and I started to find out why, but that's later. I don't like using libraries, and what you see is all from SDL and OpenGL's library, and my own code.</p>
+		<p>Javascript has tons of modules which I avoided using because I knew that they all used the same things that were implimented. You just had to look them up or find a good place for documentation. Things like React are all using one method to push elements on to the DOM, so whats the point of using it (In my opinon). Anyway I learned Javascript while in middle school before HTTPS, HTML5, CSS5, and the `let` keyword (2015). Once HTML5 started to get popular so did the modules, and so did all quick easy short cuts.</p>
+		<p>Anyway I found out that C++ is tough and so is the documentation! Also I found out how much I needed to learn to get a fast engine.</p>
+		<p>I've read about reversing the depth buffer in Grand Theft Auto 5, and in Enemy Territory: Quake Wars and wanted to do that as soon as possible. Also it smooths out the depth precision and keeps things nice looking! A simple NVidia blog read and it's in. Mipmapping wasn't a huge deal to solve initially but I read <a href="https://bgolus.medium.com/sharper-mipmapping-using-shader-based-supersampling-ed7aadb47bec">this</a> blog and loved it enough to solve it now. A simple HLSL shader to get vertex lighting in and bam.</p>
+	</div>
+	
+	<div class="gallery">
+		<img src="pics/cpp-sdl/20220219151301_1.jpg"/>
+		<img src="pics/cpp-sdl/20220115122024_1.jpg"/>
+		<img src="pics/cpp-sdl/20220115122240_1.jpg"/>
+	</div>
+	
+	<div class="section">
+		<p>The models are lists of triangle strips, grouped my material. Triangle strips were very common for the PS2 since they were so small and didn't need indices to define a face. The level is broken up into rooms and area portals where the seam from room to room are. The area portals are triangle fan definitions, and in the level file would list all the rooms that the area portal can see.</p>
+	</div>
+	
+	<div class="gallery">
+		<img src="pics/cpp-sdl/20220129180201_1.jpg"/>
+		<img src="pics/cpp-sdl/20220129180219_1.jpg"/>
+		<img src="pics/cpp-sdl/20220130142452_1.jpg"/>
+	</div>
+	
+	<div class="section"><h3>To be continued!</h3></div>
+	
+	<div class="sectiondark">
+		<a href="https://twitter.com/christiannye2">Twitter</a>
+		 | 
+		<a href="https://github.com/Volantarius">GitHub</a>
+		 | 
+		<a href="mailto:volantarius@gmail.com">volantarius@gmail.com</a>
+	</div>
+</body>
+<script src="general.js"></script>
+</html>

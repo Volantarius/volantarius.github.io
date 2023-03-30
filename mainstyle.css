@@ -51,11 +51,13 @@ body {
 	font-family: Helvetica, "Helvetica", Arial, sans-serif;
 
 	/*font-size: 1.92vw;*/
+	font-size: 96%;
 }
 
 @media screen and (orientation: landscape) {
 	body {
 		/*font-size: 1.92vh;*/
+		font-size: 96%;
 	}
 }
 
@@ -96,8 +98,8 @@ body {
 	height: 3em;
 	border-radius: 1.5em;
 	
-	background-color: rgba(255, 255, 255, 0.7);
-	box-shadow: 0px 0px 1em 2.25em rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 0px 1em 2.25em rgba(255, 255, 255, 0.3);
 	
 	background-image: url('pics/close.svg');
 	background-size: 70% 70%;
