@@ -236,9 +236,9 @@ function handle_image_zoom(event) {
 	//console.log(event);
 	
 	// Scroll bar activates strangely
-	if (event.explicitOriginalTarget.nodeName !== "IMG") {
-		return;
-	};
+	//if (event.explicitOriginalTarget.nodeName !== "IMG") {
+	//	return;
+	//};
 	
 	let overlay = create_overlay();
 	
@@ -325,7 +325,7 @@ function on_loaded() {
 	const gallery_images = document.querySelectorAll("div.gallery > img");
 	
 	for (let i = 0; i < gallery_images.length; i++) {
-		gallery_images[i].addEventListener("pointerdown", handle_image_zoom);
+		gallery_images[i].addEventListener("click", handle_image_zoom);
 		
 		//console.log(gallery_images[i]);
 	};
