@@ -252,8 +252,8 @@ function handle_image_zoom(event) {
 	
 	let context_button = vcE("div", overlay, "context", null, null);
 	// Need to literally modify the style.css to move this without issue...
-	context_button.style.left = null;
-	context_button.style.right = "4em";
+	context_button.style.left = "4em";
+	context_button.style.right = null;
 	context_button.style.top = "4em";
 	context_button.style.bottom = null;
 	context_button.style.setProperty("left", null);
@@ -293,22 +293,33 @@ function handle_image_zoom(event) {
 	
 	// Make sure we can control the image properly
 	
-	image.onclick = (e) => {
+	image.onpointerdown = (e) => {
 		e.cancelBubble = true;
 		e.stopPropagation();
 		e.stopImmediatePropagation();
 		e.preventDefault();
 	};
 	
+	image.customScale = 100;
+	
 	image.onwheel = (e) => {
-		//if (e.composed) {return;};
-		
 		e.cancelBubble = true;
 		e.stopPropagation();
 		e.stopImmediatePropagation();
 		e.preventDefault();
 		
-		console.log(e);
+		// I don't know about this, I want to drag it around but without all the javascript bullshiz
+		
+		//let amount = 5 * (e.deltaY % 5);
+		
+		//image.customScale += amount;
+		
+		/*if (image.customScale < 60) {
+			image.customScale = 60;
+		};*/
+		
+		//image.style.setProperty("scale", `${image.customScale}% ${image.customScale}%`)
+		//image.style.setProperty("transform", `translate(-${image.customScale * 0.25}% -${image.customScale * 0.25}%)`)
 	};
 };
 
@@ -326,8 +337,6 @@ function on_loaded() {
 	
 	for (let i = 0; i < gallery_images.length; i++) {
 		gallery_images[i].addEventListener("click", handle_image_zoom);
-		
-		//console.log(gallery_images[i]);
 	};
 };
 
