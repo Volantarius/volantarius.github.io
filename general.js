@@ -234,10 +234,10 @@ function create_overlay() {
 // Attach to an image so we can zoom into the image nicely!
 function handle_image_zoom(event) {
 	//console.log(event);
-	e.cancelBubble = true;
-	e.stopPropagation();
-	e.stopImmediatePropagation();
-	e.preventDefault();
+	event.cancelBubble = true;
+	event.stopPropagation();
+	event.stopImmediatePropagation();
+	event.preventDefault();
 	
 	// Scroll bar activates strangely
 	//if (event.explicitOriginalTarget.nodeName !== "IMG") {
