@@ -218,12 +218,11 @@ function create_overlay() {
 	
 	// Just to get things thrown in because it's simplier
 	//document.body.overlay.onpointerdown = (event) => {
-	document.body.overlay.onpointerdown = (event) => {
-		event.cancelBubble = true;
-		event.stopPropagation();
-		event.stopImmediatePropagation();
-		
+	document.body.overlay.onpointerup = (event) => {
 		event.preventDefault();
+		//event.cancelBubble = true;
+		//event.stopPropagation();
+		//event.stopImmediatePropagation();
 		
 		document.body.overlay.remove();
 	};
@@ -238,11 +237,6 @@ function handle_image_zoom(event) {
 	event.stopPropagation();
 	event.stopImmediatePropagation();
 	event.preventDefault();
-	
-	// Scroll bar activates strangely
-	//if (event.explicitOriginalTarget.nodeName !== "IMG") {
-	//	return;
-	//};
 	
 	let overlay = create_overlay();
 	
