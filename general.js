@@ -336,7 +336,7 @@ function on_loaded() {
 	const gallery_images = document.querySelectorAll("div.gallery > img");
 	
 	for (let i = 0; i < gallery_images.length; i++) {
-		gallery_images[i].addEventListener("pointerdown", handle_image_zoom);
+		gallery_images[i].addEventListener("pointerup", handle_image_zoom);
 	};
 };
 
